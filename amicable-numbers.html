@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Amicable Numbers</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		function amicableNumbers(num1, num2){
+
+			var sum = 0;
+
+			for (var i = 0; i < num1; i++){
+
+				if (num1 % i === 0){					
+					sum += i;					
+				}
+			}
+
+			/*
+				They are Amicable numbers 
+				if the sum of the proper divisors of num1 are equal to num2
+			*/
+			if(sum === num2){				
+				return true;
+			}else{
+				return false;
+			}
+
+		}
+
+		var result = amicableNumbers(220, 284);
+
+		if(result === true){
+			console.log("The numbers are Amicable!");
+		}else{
+			console.log("The numbers are not Amicable!");
+		}
+
+	</script>
+</body>
+</html>
